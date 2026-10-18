@@ -21,7 +21,7 @@ def create_sequences(scaled_data, seq_length=24):
         end = i+seq_length
 
         X.append(scaled_data[start:end])
-        y.append(scaled_data[seq_length+1])
+        y.append(scaled_data[end])
     
 
     return np.array(X), np.array(y)
